@@ -2,6 +2,8 @@
 const w = 700;
 const h = 300;
 
+let hey = 42;
+
 const dataset = [
   [5, 20],
   [480, 90],
