@@ -27,9 +27,9 @@ d3.selectAll("circle")
   //herunder definerer vi slutværdierne for transitionen - cirklens cx rykkes således tilbage fra 600 - 100
   .attr("cx", 100);
 
-/**
- * Havde vi haft en knap et sted på siden, kunne vi have fået animationen til at starte ved klik på knappen:
- * d3.select("#klik")
+
+ //Havde vi haft en knap et sted på siden, kunne vi have fået animationen til at starte ved klik på knappen:
+ /*d3.select("#klik")
   .on("click", function () {
     d3.selectAll("circle")
       .transition() 
@@ -38,6 +38,24 @@ d3.selectAll("circle")
       .transition()
       .duration(2000)
       .attr("cx", 100)
+  });*/
+
+  d3.select("#trekant")
+  .on("click", function () {
+    d3.selectAll("circle")
+    .transition() 
+    .duration(2000)
+    .attr("cx", 600)
+
+    .transition() 
+    .duration(2000)
+    .attr("cx",600)
+    .attr("cy", 600)
+
+    .transition() 
+    .duration(2000)
+    .attr("cx",100)
+    .attr("cy", 100)
   });
-  * Bonusopgave: implementer en knap som starter animationen og få cirklens til at bevæge sig i en trekant.
- */
+  //Bonusopgave: implementer en knap som starter animationen og få cirklens til at bevæge sig i en trekant.
+ 
